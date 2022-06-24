@@ -1,0 +1,36 @@
+<div class="container mt-2">
+
+  <div class="card" *ngIf="accounts">
+    <div class="card-header">Accounts</div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>OWNER</th>
+          <th>TYPE</th>
+          <th>BALANCE</th>
+          <th>Created At</th>
+          <th>OverDraft</th>
+          <th>interstRate</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let a of accounts">
+
+          <td>{{a.id}}</td>
+          <td>{{a.customerDTO.name}}</td>
+          <td>{{a.type}}</td>
+          <td>{{a.balance}} DH</td>
+          <td>{{a.createdAt}}</td>
+          <td>{{a.interstRate}}</td>
+
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
